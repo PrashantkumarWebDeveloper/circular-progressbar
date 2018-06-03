@@ -1,7 +1,7 @@
 @mixin adjust-size($size, $path-width, $text-size) {
     width: $size;
     height: $size;
-    .cstm-progress {
+    .circular-progressbar {
         width: $size;
         height: $size;
         border-width: $path-width;
@@ -26,7 +26,7 @@
 }
 
 @mixin create-theme($track-color, $progress-color) {
-    .cstm-progress {
+    .circular-progressbar {
 
         &:before {
             color: $progress-color;
@@ -61,14 +61,14 @@
 
 
 
-.cstm-progress-bar {
+.circular-progressbar-container {
     *,
     *:after,
     *:before {
         box-sizing: border-box;
     }
     position: relative;
-    .cstm-progress {
+    .circular-progressbar {
         position: relative;
         border-radius: 50%;
         background-color: transparent;
