@@ -1,0 +1,9 @@
+<design:component>
+	<design:attribute name="progressValue" label="Current Percentage" />
+    <design:attribute name="theme" label="Theme"
+                      datasource="default, success, warning, danger, dark, primary, info"
+                      default="success"/>
+    <design:attribute name="size" label="Size"
+                    default="defualt"
+                    datasource="defualt, extra-small, small, large, extra-large"/>
+</design:component>
