@@ -1,0 +1,292 @@
+.THIS .circular-progressbar-container {
+  position: relative;
+  width: 200px;
+  height: 200px; }
+  .THIS .circular-progressbar-container *,
+  .THIS .circular-progressbar-container *:after,
+  .THIS .circular-progressbar-container *:before {
+    box-sizing: border-box; }
+  .THIS .circular-progressbar-container .circular-progressbar {
+    position: relative;
+    border-radius: 50%;
+    background-color: transparent;
+    border-style: solid;
+    left: 0px;
+    top: 0px;
+    text-align: center; }
+    .THIS .circular-progressbar-container .circular-progressbar:before {
+      content: attr(data-progress-value);
+      position: absolute;
+      text-align: center;
+      background-color: transparent; }
+    .THIS .circular-progressbar-container .circular-progressbar:after {
+      position: absolute;
+      border-radius: 50%;
+      background-color: transparent;
+      border-style: solid;
+      content: ''; }
+    .THIS .circular-progressbar-container .circular-progressbar.first-half {
+      transform: rotate(calc( -45deg + (var(--progress-value) * 360deg/var(--max-value)))); }
+      .THIS .circular-progressbar-container .circular-progressbar.first-half:after {
+        transform: rotate(calc(90deg + 90deg - (var(--progress-value) * 360deg/var(--max-value)))); }
+      .THIS .circular-progressbar-container .circular-progressbar.first-half:before {
+        transform: rotate(calc( 45deg - (var(--progress-value) * 360deg/var(--max-value)))); }
+    .THIS .circular-progressbar-container .circular-progressbar.second-half {
+      transform: rotate(calc( -45deg + ((var(--progress-value) - (var(--max-value)/2)) * 360deg/var(--max-value)))); }
+      .THIS .circular-progressbar-container .circular-progressbar.second-half:after {
+        transform: rotate(calc(90deg + 90deg - ((var(--progress-value) - (var(--max-value)/2)) * 360deg/var(--max-value)))); }
+      .THIS .circular-progressbar-container .circular-progressbar.second-half:before {
+        transform: rotate(calc( 45deg - ((var(--progress-value) - (var(--max-value)/2)) * 360deg/var(--max-value)))); }
+  .THIS .circular-progressbar-container .circular-progressbar:before {
+    color: #001f3f; }
+  .THIS .circular-progressbar-container .circular-progressbar.first-half {
+    border-left-color: #001f3f;
+    border-top-color: #001f3f;
+    border-right-color: #DDDDDD;
+    border-bottom-color: #DDDDDD; }
+    .THIS .circular-progressbar-container .circular-progressbar.first-half:after {
+      border-left-color: transparent;
+      border-top-color: transparent;
+      border-right-color: #DDDDDD;
+      border-bottom-color: #DDDDDD; }
+  .THIS .circular-progressbar-container .circular-progressbar.second-half {
+    border-right-color: #001f3f;
+    border-bottom-color: #001f3f;
+    border-left-color: #DDDDDD;
+    border-top-color: #DDDDDD; }
+    .THIS .circular-progressbar-container .circular-progressbar.second-half:after {
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: #001f3f;
+      border-top-color: #001f3f; }
+  .THIS .circular-progressbar-container .circular-progressbar {
+    width: 200px;
+    height: 200px;
+    border-width: 20px; }
+    .THIS .circular-progressbar-container .circular-progressbar:before {
+      height: 200px;
+      width: 200px;
+      line-height: 200px;
+      left: -20px;
+      top: -20px;
+      font-size: 50px; }
+    .THIS .circular-progressbar-container .circular-progressbar:after {
+      left: -20px;
+      top: -20px;
+      width: 200px;
+      height: 200px;
+      border-width: 20px; }
+  .THIS .circular-progressbar-container.success .circular-progressbar:before {
+    color: #2ECC40; }
+  .THIS .circular-progressbar-container.success .circular-progressbar.first-half {
+    border-left-color: #2ECC40;
+    border-top-color: #2ECC40;
+    border-right-color: #DDDDDD;
+    border-bottom-color: #DDDDDD; }
+    .THIS .circular-progressbar-container.success .circular-progressbar.first-half:after {
+      border-left-color: transparent;
+      border-top-color: transparent;
+      border-right-color: #DDDDDD;
+      border-bottom-color: #DDDDDD; }
+  .THIS .circular-progressbar-container.success .circular-progressbar.second-half {
+    border-right-color: #2ECC40;
+    border-bottom-color: #2ECC40;
+    border-left-color: #DDDDDD;
+    border-top-color: #DDDDDD; }
+    .THIS .circular-progressbar-container.success .circular-progressbar.second-half:after {
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: #2ECC40;
+      border-top-color: #2ECC40; }
+  .THIS .circular-progressbar-container.warning .circular-progressbar:before {
+    color: #FF851B; }
+  .THIS .circular-progressbar-container.warning .circular-progressbar.first-half {
+    border-left-color: #FF851B;
+    border-top-color: #FF851B;
+    border-right-color: #DDDDDD;
+    border-bottom-color: #DDDDDD; }
+    .THIS .circular-progressbar-container.warning .circular-progressbar.first-half:after {
+      border-left-color: transparent;
+      border-top-color: transparent;
+      border-right-color: #DDDDDD;
+      border-bottom-color: #DDDDDD; }
+  .THIS .circular-progressbar-container.warning .circular-progressbar.second-half {
+    border-right-color: #FF851B;
+    border-bottom-color: #FF851B;
+    border-left-color: #DDDDDD;
+    border-top-color: #DDDDDD; }
+    .THIS .circular-progressbar-container.warning .circular-progressbar.second-half:after {
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: #FF851B;
+      border-top-color: #FF851B; }
+  .THIS .circular-progressbar-container.danger .circular-progressbar:before {
+    color: #FF4136; }
+  .THIS .circular-progressbar-container.danger .circular-progressbar.first-half {
+    border-left-color: #FF4136;
+    border-top-color: #FF4136;
+    border-right-color: #DDDDDD;
+    border-bottom-color: #DDDDDD; }
+    .THIS .circular-progressbar-container.danger .circular-progressbar.first-half:after {
+      border-left-color: transparent;
+      border-top-color: transparent;
+      border-right-color: #DDDDDD;
+      border-bottom-color: #DDDDDD; }
+  .THIS .circular-progressbar-container.danger .circular-progressbar.second-half {
+    border-right-color: #FF4136;
+    border-bottom-color: #FF4136;
+    border-left-color: #DDDDDD;
+    border-top-color: #DDDDDD; }
+    .THIS .circular-progressbar-container.danger .circular-progressbar.second-half:after {
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: #FF4136;
+      border-top-color: #FF4136; }
+  .THIS .circular-progressbar-container.dark .circular-progressbar:before {
+    color: #111111; }
+  .THIS .circular-progressbar-container.dark .circular-progressbar.first-half {
+    border-left-color: #111111;
+    border-top-color: #111111;
+    border-right-color: #DDDDDD;
+    border-bottom-color: #DDDDDD; }
+    .THIS .circular-progressbar-container.dark .circular-progressbar.first-half:after {
+      border-left-color: transparent;
+      border-top-color: transparent;
+      border-right-color: #DDDDDD;
+      border-bottom-color: #DDDDDD; }
+  .THIS .circular-progressbar-container.dark .circular-progressbar.second-half {
+    border-right-color: #111111;
+    border-bottom-color: #111111;
+    border-left-color: #DDDDDD;
+    border-top-color: #DDDDDD; }
+    .THIS .circular-progressbar-container.dark .circular-progressbar.second-half:after {
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: #111111;
+      border-top-color: #111111; }
+  .THIS .circular-progressbar-container.primary .circular-progressbar:before {
+    color: #0074D9; }
+  .THIS .circular-progressbar-container.primary .circular-progressbar.first-half {
+    border-left-color: #0074D9;
+    border-top-color: #0074D9;
+    border-right-color: #DDDDDD;
+    border-bottom-color: #DDDDDD; }
+    .THIS .circular-progressbar-container.primary .circular-progressbar.first-half:after {
+      border-left-color: transparent;
+      border-top-color: transparent;
+      border-right-color: #DDDDDD;
+      border-bottom-color: #DDDDDD; }
+  .THIS .circular-progressbar-container.primary .circular-progressbar.second-half {
+    border-right-color: #0074D9;
+    border-bottom-color: #0074D9;
+    border-left-color: #DDDDDD;
+    border-top-color: #DDDDDD; }
+    .THIS .circular-progressbar-container.primary .circular-progressbar.second-half:after {
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: #0074D9;
+      border-top-color: #0074D9; }
+  .THIS .circular-progressbar-container.info .circular-progressbar:before {
+    color: #FFDC00; }
+  .THIS .circular-progressbar-container.info .circular-progressbar.first-half {
+    border-left-color: #FFDC00;
+    border-top-color: #FFDC00;
+    border-right-color: #DDDDDD;
+    border-bottom-color: #DDDDDD; }
+    .THIS .circular-progressbar-container.info .circular-progressbar.first-half:after {
+      border-left-color: transparent;
+      border-top-color: transparent;
+      border-right-color: #DDDDDD;
+      border-bottom-color: #DDDDDD; }
+  .THIS .circular-progressbar-container.info .circular-progressbar.second-half {
+    border-right-color: #FFDC00;
+    border-bottom-color: #FFDC00;
+    border-left-color: #DDDDDD;
+    border-top-color: #DDDDDD; }
+    .THIS .circular-progressbar-container.info .circular-progressbar.second-half:after {
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: #FFDC00;
+      border-top-color: #FFDC00; }
+  .THIS .circular-progressbar-container.extra-small {
+    width: 60px;
+    height: 60px; }
+    .THIS .circular-progressbar-container.extra-small .circular-progressbar {
+      width: 60px;
+      height: 60px;
+      border-width: 10px; }
+      .THIS .circular-progressbar-container.extra-small .circular-progressbar:before {
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+        left: -10px;
+        top: -10px;
+        font-size: 20px; }
+      .THIS .circular-progressbar-container.extra-small .circular-progressbar:after {
+        left: -10px;
+        top: -10px;
+        width: 60px;
+        height: 60px;
+        border-width: 10px; }
+  .THIS .circular-progressbar-container.small {
+    width: 100px;
+    height: 100px; }
+    .THIS .circular-progressbar-container.small .circular-progressbar {
+      width: 100px;
+      height: 100px;
+      border-width: 15px; }
+      .THIS .circular-progressbar-container.small .circular-progressbar:before {
+        height: 100px;
+        width: 100px;
+        line-height: 100px;
+        left: -15px;
+        top: -15px;
+        font-size: 30px; }
+      .THIS .circular-progressbar-container.small .circular-progressbar:after {
+        left: -15px;
+        top: -15px;
+        width: 100px;
+        height: 100px;
+        border-width: 15px; }
+  .THIS .circular-progressbar-container.large {
+    width: 300px;
+    height: 300px; }
+    .THIS .circular-progressbar-container.large .circular-progressbar {
+      width: 300px;
+      height: 300px;
+      border-width: 25px; }
+      .THIS .circular-progressbar-container.large .circular-progressbar:before {
+        height: 300px;
+        width: 300px;
+        line-height: 300px;
+        left: -25px;
+        top: -25px;
+        font-size: 100px; }
+      .THIS .circular-progressbar-container.large .circular-progressbar:after {
+        left: -25px;
+        top: -25px;
+        width: 300px;
+        height: 300px;
+        border-width: 25px; }
+  .THIS .circular-progressbar-container.extra-large {
+    width: 500px;
+    height: 500px; }
+    .THIS .circular-progressbar-container.extra-large .circular-progressbar {
+      width: 500px;
+      height: 500px;
+      border-width: 40px; }
+      .THIS .circular-progressbar-container.extra-large .circular-progressbar:before {
+        height: 500px;
+        width: 500px;
+        line-height: 500px;
+        left: -40px;
+        top: -40px;
+        font-size: 150px; }
+      .THIS .circular-progressbar-container.extra-large .circular-progressbar:after {
+        left: -40px;
+        top: -40px;
+        width: 500px;
+        height: 500px;
+        border-width: 40px; }
+
+/*# sourceMappingURL=main.css.map */

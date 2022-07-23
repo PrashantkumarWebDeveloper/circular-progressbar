@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="progressValue" type="Integer" default="10" />
+    <aura:attribute name="theme" type="String" default="" />
+    <aura:attribute name="size" type="String" default="" />
+    
+    <div class="slds-grid slds-wrap">
+        <div class="slds-size_1-of-1">
+            <div class="{! 'circular-progressbar-container ' + v.theme + ' ' + v.size}">
+                <div class="{!'circular-progressbar ' + (v.progressValue gt 50 ? 'second-half' : 'first-half')}" 
+                     data-progress-value="{!v.progressValue}"  
+                     style="{!'--progress-value: ' + v.progressValue + '; --max-value: 100'}"></div>
+            </div>
+        </div>
+    </div>
+</aura:component>
